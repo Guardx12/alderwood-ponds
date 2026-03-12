@@ -1,11 +1,18 @@
 # Alderwood Ponds site
 
-This build is set up in the same general style as the GuardX site:
-- Next.js app router
-- TypeScript enabled
-- public/images asset path
-- Vercel-ready scripts
+Fresh Next.js build for Vercel.
 
-Important:
-If you upload this into an existing GitHub repo using the web uploader, old files can stay behind.
-If possible, use a fresh repo or delete the old repo contents first, then upload this version.
+## Deploy notes
+
+Use a fresh GitHub repo if possible, or delete the old repo contents before uploading this version. Earlier build failures were caused by leftover files in the old repo.
+
+## Environment variable for George
+
+Add this in Vercel:
+
+- `OPENAI_API_KEY`
+
+George uses:
+- `/api/george`
+- `/api/george/speak`
+- `/api/george/transcribe`

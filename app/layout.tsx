@@ -1,17 +1,25 @@
-import './globals.css'
-import type { Metadata } from 'next'
-import type { ReactNode } from 'react'
+import type { ReactNode } from "react"
+import type { Metadata } from "next"
+import "./globals.css"
+import { SiteFooter, SiteHeader } from "@/components/layout"
+import { site } from "@/components/site-data"
 
 export const metadata: Metadata = {
-  title: 'Alderwood Ponds | Coarse Fishery in Steyning, West Sussex',
-  description:
-    'Alderwood Ponds coarse fishery information site with fish sizes, prices, rules, night fishing, cabins, camping, and contact information.',
+  title: {
+    default: "Alderwood Ponds",
+    template: "%s | Alderwood Ponds",
+  },
+  description: site.description,
 }
 
-export default function RootLayout({ children }: { children: ReactNode }) {
+export default function RootLayout({ children }: Readonly<{ children: ReactNode }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <SiteHeader />
+        {children}
+        <SiteFooter />
+      </body>
     </html>
   )
 }
