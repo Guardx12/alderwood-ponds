@@ -386,7 +386,7 @@ export function GeorgeLiveAssistant() {
 
       const audio = document.createElement("audio")
       audio.autoplay = true
-      audio.playsInline = true
+      ;(audio as any).playsInline = true
       audioRef.current = audio
 
       pc.ontrack = (event) => {
