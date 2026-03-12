@@ -1,9 +1,5 @@
-import { GeorgeAssistant } from "@/components/george-assistant"
+import { GeorgeLiveAssistant } from "@/components/george-live-assistant"
 
 export default function MeetGeorgePage() {
-  return (
-    <main>
-      <GeorgeAssistant />
-    </main>
-  )
+  return <GeorgeLiveAssistant />
 }
