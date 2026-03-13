@@ -6,13 +6,21 @@ export type UpdateItem = {
 
 export const site = {
   name: "Alderwood Ponds",
-  description: "Coarse fishery in Steyning, West Sussex with three waters, day and night fishing, cabins, camping, and clear angler information.",
+  description:
+    "Coarse fishery in Steyning, West Sussex with three waters, day and night fishing, cabins, camping, and clear angler information.",
   phone: "07713 468264",
   phoneDisplay: "07713 468264",
   address: "Horsham Road, Steyning, West Sussex BN44 3AA",
   directions:
     "From the A283 Steyning Bypass, take the B2135 Ashurst to Partridge Green Road. The fishery is around 200 yards on the left, opposite Chanctonfold Industrial Estate.",
-  hours: "Wednesday to Sunday, 8am–5pm, winter to dusk. May to August open until 7pm. Open bank holiday Mondays.",
+  hours:
+    "Booking and enquiry line Monday to Friday, 9am to 12 midday. Day ticket prices are paid on the bank and there are no half-day tickets.",
+  nearby: [
+    "Steyning town centre is the nearest main place for pubs, cafés, takeaways, shops, and day-to-day essentials.",
+    "There are also general food and drink options in nearby Bramber and Upper Beeding along the A283 corridor.",
+    "The South Downs National Park and Chanctonbury Ring are nearby local landmarks visitors may recognise.",
+    "For anything specific nearby, George should stay general, helpfully suggest Steyning first, and then guide people back to Alderwood Ponds details.",
+  ],
 }
 
 export const fishSizes = [
@@ -26,164 +34,106 @@ export const fishSizes = [
 ]
 
 export const waters = [
-  "Daves Pond — disabled access with hard-stand parking",
+  "Dave's Pond — disabled access with hard-stand parking",
   "Corsican Pond — 15 pegs",
-  "Island Lake — 26 pegs",
-]
-
-export const rules = [
-  "No barbed hooks, micro barbs, or crushed barbs.",
-  "Cradles are required for Island Lake.",
-  "Minimum 14-inch carp-safe landing net required for all ponds and lake.",
-  "A 42-inch net is also required for Island Lake.",
-  "Disgorger and forceps required.",
-  "All mats, nets, and weigh slings must be dipped before fishing, even if not used elsewhere.",
-  "Keep groundbait to a minimum in small feeders or PVA bags.",
-  "No live bait, nuts, bread, spinners, spodding, or bait boats.",
-  "No radios unless using earphones.",
-  "No loose dogs and no dogs left in cars on the property.",
-  "No picnics unless fishing.",
-  "No visitors. Pre-paid booked anglers, guests, and dogs only.",
-  "No changing peg unless booked.",
-  "No keep nets.",
-  "No sea line and no braid on line.",
-  "No fixed leads or feeders.",
-  "Boilies in moderation.",
-  "No BBQs unless using a stand. No BBQs on grass, bricks, or wood.",
-  "No exit between closing time and 8am.",
-  "Entry for anglers and guests is 8am to closing. Leave enough time to pack away before gates are locked.",
-  "No children under 10 on the bank unless fishing and accompanied by an adult.",
-  "No children on the bank between 5pm and 8am unless night fishing.",
-  "No ball games or cycles on the bank.",
-  "Rubbish must be taken home.",
-  "All fish must be landed in a net and returned as soon as possible using a net. Do not handle fish with a towel.",
-  "No wading and no fly fishing.",
-  "Use toilet facilities, not bushes.",
-  "Do not use a disabled swim unless you hold a blue badge.",
-]
-
-export const essentialGear = [
-  "Barbless hooks. Hook checks may be carried out.",
-  "Minimum 14-inch carp-safe landing net.",
-  "A substantial carp-safe landing mat.",
-  "For Corsican Pond and Daves Pond, mats and nets must be carp safe.",
-  "For Island Lake, a cradle is required plus a 40–42 inch landing net if possible.",
-  "Fish must be weighed in a weigh sling only.",
-  "Carry forceps and a disgorger at all times.",
-  "Stay within three metres of your rods at all times.",
-  "A valid fishing licence is required for anyone aged 12 and over.",
-  "Dip all nets, mats, cradles, and weigh slings in the chemical dips provided before fishing.",
-  "Fish only from designated swims.",
-  "Do not drive down to the ponds unless you hold a valid disabled badge.",
-  "Display your disabled badge in the windscreen.",
-  "Visitors must not park in the main car park.",
-  "Do not land fish on a hot mat or handle fish for too long.",
-  "Respect the premises and other anglers.",
-  "Take litter home and clear discarded line from your swim before leaving.",
+  "Island Lake — specimen carp water",
 ]
 
 export const dayTickets = [
-  "Island Lake — £20",
-  "Corsican Pond — £15",
-  "Daves Pond — £15",
-  "Day guests — £3",
-  "Dogs — £2.50",
-  "No visitors",
+  "Island Lake day ticket — £20",
+  "Corsican Pond day ticket — £15",
+  "Dave's Pond day ticket — £15",
+  "Up to two rods on day tickets",
+  "No half-day tickets",
+  "Tickets are purchased on the bank",
 ]
 
 export const nightFishing = [
-  "Anglers up to 3 rods per person",
-  "24 hours, 8am to 8am or pm to pm — £40",
-  "Guests — £35, booked only",
-  "Dogs — £2.50",
-  "No visitors",
-  "Vacate your swim by 8am unless you are buying a new day ticket",
-  "In an emergency use the out-of-hours number on the back of your ticket",
+  "Night fishing runs 8pm to 8am or pm to pm",
+  "Midday to midday is allowed, but swims are not reserved",
+  "Extra day — £20",
+  "Guests — £35",
+  "Juniors — £30",
+  "Up to 3 rods per person",
 ]
 
 export const cabins = [
-  "Anglers Rest (electric) — £65 per person per night",
+  "Anglers Rest — £65 per person per night",
+  "Check-in 11:30am, checkout 10:30am",
+  "Two reserved swims with up to 3 rods each and 24-hour fishing included",
+  "Own small hardstand car park near the shower and toilet",
+  "Electric, heating, dining table and benches",
+  "Small kitchenette with no sink; gas stove allowed",
+  "Water taps behind the cabin, kettle, toaster, washing-up bowl, bin and electric cool box",
+  "Beds have fitted sheets; bring your own sleeping bag and pillows",
+  "Menus are kept in the folder and can deliver when the café is closed",
+  "Dogs — £2.50, paying day guests only — £3 per person",
+  "No smoking in or around cabins, no fire pits, barbecues on legs only, not on the ground",
+  "Please take your rubbish home",
   "Robins Retreat — £60 per person per night",
-  "Pre-paid booked day guests only — £3",
-  "Dogs — £2.50",
-  "Up to 3 rods each for 24 hours",
-  "Check-in 11:30am / check-out 10:30am",
-  "If you wish to fish after checkout, move to another peg and pay on the bank",
-  "Coin meter in cabin, lighting free",
-  "Please bring utensils, cutlery, cups, bedding, and fitted sheets only",
-  "Available Wednesday to Saturday, closed Monday and Tuesday, available on bank holidays",
-  "Two-night minimum stay on Saturday/Sunday bank holiday weekends",
-  "Full payment is due if cancelled within seven days of arrival",
+  "Check-in 11:00am, checkout 10:00am",
+  "Two reserved swims with up to 3 rods each and 24-hour fishing included",
+  "Solar lights and a kitchenette with no sink; gas stove allowed outside only, not in the cabin",
+  "Washing-up bowl, water taps behind cabin, bin and cool box",
+  "Backs onto the camping field with views of the South Downs National Park and Chanctonbury Ring",
+  "Summer parking behind the cabin only",
+  "Dogs — £2.50, paying day guests only — £3 per person",
+  "No smoking in or around cabins, no fire pits, barbecues on legs only, not on the ground",
+  "Please take your rubbish home",
 ]
 
 export const camping = [
-  "Camping season: May to September",
-  "Caravans, campers, and tents welcome",
-  "Caravan/camper pitch — £20 per night",
-  "Tent pitch — £15 per night",
-  "Electric/water — £5",
-  "Adults — £6",
-  "Juniors — £4",
-  "Dogs — £2.50",
-  "Day guests — £3",
-  "Fishing not included. Tickets should be bought on the bank from the bailiff.",
-  "Gates lock at 7pm and open at 8am for a safe and quiet stay.",
+  "Check-in 10:00am, checkout 9:00am",
+  "Caravan or camper pitch — £20 per pitch per night",
+  "Tent pitch — £15 per pitch per night",
+  "Electric — £5 per night",
+  "Adults — £6 per night",
+  "Juniors — £4 per night",
+  "Dogs — £2.50 per night",
+  "Guests — £3 for the day during opening hours",
+  "Day fishing tickets are purchased separately on the bank",
+  "No children on the bank unless fishing; children under 12 must be accompanied by an adult at all times",
+  "Gates are securely locked at night and the bailiff or owner is on site",
+  "Please take your rubbish home",
+]
+
+export const rules = [
+  "Barbless hooks only",
+  "No braid",
+  "No fixed leads",
+  "No bait boats",
+  "No keep nets",
+  "No half-day tickets",
+  "Tickets are paid on the bank",
+]
+
+export const essentialGear = [
+  "Cradles are required for Island Lake",
+  "Large landing net required",
+  "Bring dipped equipment for the pond you are fishing",
+  "Use safe rigs only",
+  "No smoking in or around cabins",
+  "Barbecues must be on legs, not on the ground",
 ]
 
 export const dogRules = [
-  "Dogs allowed on the bank if the owner is fishing, maximum two dogs.",
-  "Dogs must be tethered at all times on the bank.",
-  "Well-behaved dogs only. Persistent barking or aggression will be asked to leave.",
-  "No dogs left in cars on the property.",
-  "Please clean up after your dog.",
-  "Dogs can be exercised in the fields behind the lake on a lead at all times.",
-  "Ensure your dog has ample shade and water.",
-  "Drinking water taps are near the dip and shed, in the camping field, and at Daves Pond.",
-  "For night fishing, tell the fishery at booking how many dogs are coming. £2.50 per dog per night.",
+  "Dogs are charged at £2.50",
+  "Paying day guests only are £3 per person where stated",
+  "Dogs are allowed at the cabins and camping subject to the fishery rules",
+  "Please keep dogs under control and follow the site guidance on arrival",
 ]
 
 export const importantInfo = [
-  "Paying anglers, guests, and dogs only. No visitors. If anything needs collecting, park and meet at the main gate.",
-  "Park in the main car park unless disabled. Reserved disabled swims are available.",
-  "Night fishing runs 8am–8am or pm–pm. Vacate your swim by 8am unless staying on and paying for a day ticket.",
-  "Main gates are open 8am to 5pm at present. May, June, July, and August open to 7pm.",
-  "Only call the enquiry and booking line Monday to Friday, 9am to 12 midday.",
-  "Do not contact by Facebook, text, Messenger, WhatsApp, or email.",
-  "Cabin guests should collect keys from the key safe on arrival and return them at checkout for the cleaners.",
-  "Cabin payments should be deposited in an envelope with cabin name, guest name, and amount written on the front.",
-  "If you want to keep fishing after a cabin stay, move to another swim or pond and buy a day ticket.",
-  "Bring the correct dipped equipment for the pond you are fishing. Barbless hooks only.",
+  "Booking and enquiry line is Monday to Friday, 9am to 12 midday.",
+  "There are no half-day tickets.",
+  "Day tickets are purchased on the bank separately.",
+  "Night fishing runs 8pm to 8am or pm to pm.",
+  "Midday to midday is allowed, but swims are not reserved.",
+  "Dave's Pond has disabled access and hard-stand parking.",
+  "Please take your rubbish home.",
+  "No children on the bank unless fishing; children under 12 must be with an adult at all times.",
+  "Gates are securely locked at night with a bailiff or owner on site.",
+  "George can help with prices, cabins, camping, directions and general nearby guidance, but bookings still go through Julie.",
 ]
 
-export const updates: UpdateItem[] = [
-  {
-    title: "Re-opening update",
-    date: "22 Jan 2026",
-    text: "Alderwood Ponds says it will re-open on 4 March 2026. Normal hours return, no bookings are needed for day fishing, anglers choose a swim on arrival, and cabin swims remain reserved for cabin guests.",
-  },
-  {
-    title: "Carp report",
-    date: "22 Dec 2025",
-    text: "Dan landed an 18lb 8oz common and a 13lb 9oz mirror from Island Lake using king prawn.",
-  },
-  {
-    title: "Fishing report Sept/Oct 2025",
-    date: "15 Oct 2025",
-    text: "Reports include 24-hour sessions from Anglers Rest with carp to 20lb, margin-caught mirrors to 21lb 4oz on the Island Lake, and multiple productive sessions near Robins Retreat.",
-  },
-  {
-    title: "Fishing report",
-    date: "3 Aug 2025",
-    text: "The Island Lake produced plenty of fish and families were also enjoying Daves Pond and the Corsican Pond using natural baits such as luncheon meat, sweetcorn, prawns, and pellets.",
-  },
-  {
-    title: "Fishing report March 2025",
-    date: "13 Mar 2025",
-    text: "A 48-hour session produced a range of fish including perch to over 3lb, plus rudd and pumpkinseed, with prawns and maggots working well.",
-  },
-  {
-    title: "Fishing report Feb 2025",
-    date: "14 Feb 2025",
-    text: "Reported captures included a 14lb 8oz common, a 12lb 4oz leather, and a 3lb 7oz perch.",
-  },
-]
+export const updates: UpdateItem[] = []
