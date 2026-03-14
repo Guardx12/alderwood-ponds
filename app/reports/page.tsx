@@ -8,6 +8,7 @@ export default function ReportsPage() {
         eyebrow="Latest reports"
         title="Recent updates and catch reports"
         text="Recent reports and reopening notes carried across from the previous Alderwood Ponds website."
+        image="/images/morning-lake.webp"
       />
       <section className="section container report-grid full-grid">
         {updates.map((item) => (

@@ -8,6 +8,7 @@ export default function StayPage() {
         eyebrow="Stay on site"
         title="Cabins and camping"
         text="Fishing shelters with reserved swims plus camping from May to September."
+        image="/images/hero-lake.webp"
       />
       <section className="section container two-col">
         <div className="panel">

@@ -473,49 +473,48 @@ export function GeorgeLiveAssistant() {
   return (
     <section className="mx-auto flex min-h-[calc(100vh-88px)] w-full max-w-6xl flex-col px-4 pb-10 pt-8 sm:px-6 lg:px-8 lg:pt-10">
       <div className="mx-auto mb-6 max-w-4xl text-center">
-        <div className="mx-auto mb-5 flex max-w-4xl items-center justify-center overflow-hidden rounded-[28px] border border-[#DADCE0] bg-[linear-gradient(135deg,#0f172a_0%,#111827_42%,#1d4ed8_100%)] px-6 py-7 text-left shadow-[0_24px_80px_rgba(17,24,39,0.24)] sm:px-8">
+        <div className="mx-auto mb-5 flex max-w-4xl items-center justify-center overflow-hidden rounded-[28px] border border-[#27463D] bg-[linear-gradient(135deg,#0B1512_0%,#10211B_42%,#1E4D3D_100%)] px-6 py-7 text-left shadow-[0_24px_80px_rgba(7,14,12,0.34)] sm:px-8">
           <div className="max-w-3xl">
-            <p className="text-xs font-semibold uppercase tracking-[0.26em] text-[#BFDBFE] sm:text-sm">Meet George</p>
+            <p className="text-xs font-semibold uppercase tracking-[0.26em] text-[#CFE5DA] sm:text-sm">Meet George</p>
             <h1 className="mt-2 text-3xl font-extrabold tracking-tight text-white sm:text-4xl lg:text-5xl">
-              Your AI fishery assistant.
+              Your Alderwood Ponds assistant.
             </h1>
-            <p className="mt-3 max-w-2xl text-sm leading-6 text-[#DBEAFE] sm:text-base sm:leading-7">
-              George answers questions about Alderwood Ponds, explains the rules, and helps visitors find the right
-              information quickly — day or night.
+            <p className="mt-3 max-w-2xl text-sm leading-6 text-[#E3F0EA] sm:text-base sm:leading-7">
+              George answers questions about Alderwood Ponds, explains the rules, and helps visitors quickly find the right information about fishing, staying and visiting.
             </p>
-            <p className="mt-4 text-sm font-semibold text-[#93C5FD] sm:text-base">
+            <p className="mt-4 text-sm font-semibold text-[#A8D5C1] sm:text-base">
               Prices • Rules • Fish sizes • Night fishing • Cabins • Camping
             </p>
           </div>
         </div>
 
-        <p className="mt-4 text-xl font-medium text-[#202124] sm:text-2xl">Meet George.</p>
-        <p className="mx-auto mt-4 max-w-3xl text-base leading-7 text-[#5F6368] sm:text-lg sm:leading-8">
+        <p className="mt-4 text-xl font-medium text-[#15201B] sm:text-2xl">Meet George in the same calm, dark-green theme.</p>
+        <p className="mx-auto mt-4 max-w-3xl text-base leading-7 text-[#5E6F68] sm:text-lg sm:leading-8">
           George is the AI assistant built into the Alderwood Ponds website. He can talk through tickets, opening
           hours, fish sizes, rules, dog policies, shelters, camping, directions, and general fishery information.
         </p>
-        <p className="mt-4 text-sm font-semibold text-[#1A73E8] sm:text-base">
+        <p className="mt-4 text-sm font-semibold text-[#1E6B51] sm:text-base">
           Try asking George about prices, rules, night fishing, cabins, camping, or which pond might suit you best.
         </p>
-        <p className="mt-3 text-sm text-[#5F6368]">
-          On the home page George appears as a smaller assistant in the corner. This is his full-page version.
+        <p className="mt-3 text-sm text-[#5E6F68]">
+          On the home page George stays as the smaller assistant in the bottom-right corner. This is his full-page version.
         </p>
       </div>
 
       <div className="grid gap-6 lg:grid-cols-[1.2fr_0.8fr]">
-        <div className="overflow-hidden rounded-[28px] border border-[#DADCE0] bg-white shadow-[0_20px_60px_rgba(17,24,39,0.08)]">
-          <div className="flex items-center justify-between border-b border-[#E5E7EB] px-5 py-4 sm:px-6">
+        <div className="overflow-hidden rounded-[28px] border border-[#D8E2DB] bg-white shadow-[0_20px_60px_rgba(10,24,19,0.08)]">
+          <div className="flex items-center justify-between border-b border-[#E1E8E2] px-5 py-4 sm:px-6">
             <div>
-              <p className="text-sm font-semibold text-[#202124]">Live voice conversation</p>
-              <p className="mt-1 text-sm text-[#5F6368]">Speak naturally — George listens and replies out loud.</p>
+              <p className="text-sm font-semibold text-[#15201B]">Live voice conversation</p>
+              <p className="mt-1 text-sm text-[#5E6F68]">Speak naturally — George listens and replies out loud.</p>
             </div>
-            <div className="inline-flex items-center gap-2 rounded-full bg-[#EEF4FF] px-3 py-1 text-xs font-semibold text-[#1A73E8]">
+            <div className="inline-flex items-center gap-2 rounded-full bg-[#EFF6F1] px-3 py-1 text-xs font-semibold text-[#1E6B51]">
               <Radio className="h-3.5 w-3.5" />
               {statusText}
             </div>
           </div>
 
-          <div ref={scrollRef} className="max-h-[520px] space-y-4 overflow-y-auto bg-[#F8FAFC] px-5 py-5 sm:px-6">
+          <div ref={scrollRef} className="max-h-[520px] space-y-4 overflow-y-auto bg-[#F4F7F4] px-5 py-5 sm:px-6">
             {messages.map((message) => {
               const isAssistant = message.role !== "user"
               return (
@@ -523,8 +522,8 @@ export function GeorgeLiveAssistant() {
                   key={message.id}
                   className={`max-w-[88%] rounded-3xl px-4 py-3 text-sm leading-6 shadow-sm sm:text-[15px] ${
                     isAssistant
-                      ? "mr-auto bg-white text-[#202124] border border-[#E5E7EB]"
-                      : "ml-auto bg-[#1A73E8] text-white"
+                      ? "mr-auto bg-white text-[#15201B] border border-[#E1E8E2]"
+                      : "ml-auto bg-[#1E5A46] text-white"
                   }`}
                 >
                   <p className="mb-1 text-[11px] font-semibold uppercase tracking-[0.18em] opacity-70">
@@ -536,12 +535,12 @@ export function GeorgeLiveAssistant() {
             })}
           </div>
 
-          <div className="flex flex-wrap items-center gap-3 border-t border-[#E5E7EB] px-5 py-4 sm:px-6">
+          <div className="flex flex-wrap items-center gap-3 border-t border-[#E1E8E2] px-5 py-4 sm:px-6">
             {connectionState !== "connected" ? (
               <button
                 onClick={startConversation}
                 disabled={!canStart}
-                className="inline-flex items-center gap-2 rounded-full bg-[#1A73E8] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#1558C0] disabled:cursor-not-allowed disabled:opacity-60"
+                className="inline-flex items-center gap-2 rounded-full bg-[#1E5A46] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#174838] disabled:cursor-not-allowed disabled:opacity-60"
               >
                 {connectionState === "connecting" ? (
                   <>
@@ -558,21 +557,21 @@ export function GeorgeLiveAssistant() {
             ) : (
               <button
                 onClick={stopConversation}
-                className="inline-flex items-center gap-2 rounded-full bg-[#111827] px-5 py-3 text-sm font-semibold text-white transition hover:bg-black"
+                className="inline-flex items-center gap-2 rounded-full bg-[#13211C] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#0B1512]"
               >
                 <PhoneOff className="h-4 w-4" />
                 End conversation
               </button>
             )}
 
-            <div className="inline-flex items-center gap-2 rounded-full border border-[#DADCE0] bg-white px-4 py-2 text-sm text-[#374151]">
-              <Volume2 className="h-4 w-4 text-[#1A73E8]" />
+            <div className="inline-flex items-center gap-2 rounded-full border border-[#D8E2DB] bg-white px-4 py-2 text-sm text-[#365046]">
+              <Volume2 className="h-4 w-4 text-[#1E6B51]" />
               Voice enabled
             </div>
 
             {isModelSpeaking ? (
-              <div className="inline-flex items-center gap-2 rounded-full border border-[#DADCE0] bg-white px-4 py-2 text-sm text-[#374151]">
-                <Loader2 className="h-4 w-4 animate-spin text-[#1A73E8]" />
+              <div className="inline-flex items-center gap-2 rounded-full border border-[#D8E2DB] bg-white px-4 py-2 text-sm text-[#365046]">
+                <Loader2 className="h-4 w-4 animate-spin text-[#1E6B51]" />
                 George is speaking
               </div>
             ) : null}
@@ -580,9 +579,9 @@ export function GeorgeLiveAssistant() {
         </div>
 
         <aside className="space-y-4">
-          <div className="rounded-[28px] border border-[#DADCE0] bg-white p-6 shadow-[0_20px_60px_rgba(17,24,39,0.08)]">
-            <h2 className="text-lg font-semibold text-[#202124]">What George knows</h2>
-            <ul className="mt-4 space-y-3 text-sm leading-6 text-[#5F6368]">
+          <div className="rounded-[28px] border border-[#D8E2DB] bg-white p-6 shadow-[0_20px_60px_rgba(17,24,39,0.08)]">
+            <h2 className="text-lg font-semibold text-[#15201B]">What George knows</h2>
+            <ul className="mt-4 space-y-3 text-sm leading-6 text-[#5E6F68]">
               <li>Ticket prices for day fishing, night fishing, guests, dogs, cabins, and camping.</li>
               <li>Fish sizes, ponds on site, disabled access, opening hours, and payment information.</li>
               <li>Fishery rules, required gear, dog rules, cabin details, camping details, and directions.</li>
@@ -590,9 +589,9 @@ export function GeorgeLiveAssistant() {
             </ul>
           </div>
 
-          <div className="rounded-[28px] border border-[#DADCE0] bg-white p-6 shadow-[0_20px_60px_rgba(17,24,39,0.08)]">
-            <h2 className="text-lg font-semibold text-[#202124]">Good things to ask</h2>
-            <ul className="mt-4 space-y-3 text-sm leading-6 text-[#5F6368]">
+          <div className="rounded-[28px] border border-[#D8E2DB] bg-white p-6 shadow-[0_20px_60px_rgba(17,24,39,0.08)]">
+            <h2 className="text-lg font-semibold text-[#15201B]">Good things to ask</h2>
+            <ul className="mt-4 space-y-3 text-sm leading-6 text-[#5E6F68]">
               <li>What are the day ticket prices?</li>
               <li>Can I night fish and how much does it cost?</li>
               <li>What rules do I need to know before I come?</li>
@@ -602,16 +601,16 @@ export function GeorgeLiveAssistant() {
             </ul>
           </div>
 
-          <div className="rounded-[28px] border border-[#DADCE0] bg-[linear-gradient(180deg,#F8FAFF_0%,#EEF4FF_100%)] p-6 shadow-[0_20px_60px_rgba(17,24,39,0.08)]">
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#1A73E8]">Need to book or confirm details?</p>
-            <p className="mt-3 text-sm leading-6 text-[#374151]">
+          <div className="rounded-[28px] border border-[#D8E2DB] bg-[linear-gradient(180deg,#F4F8F5_0%,#E7F0EA_100%)] p-6 shadow-[0_20px_60px_rgba(17,24,39,0.08)]">
+            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#1E6B51]">Need to book or confirm details?</p>
+            <p className="mt-3 text-sm leading-6 text-[#365046]">
               George can explain the website information, but for bookings and direct enquiries the site still points
-              visitors to Julie on 07713 468264, Monday to Friday, 9am to 12 midday.
+              visitors to the booking line on 07713 468264, Monday to Friday, 9am to 12 midday.
             </p>
           </div>
 
           {error ? (
-            <div className="rounded-[24px] border border-[#F5C2C7] bg-[#FFF5F5] p-4 text-sm text-[#8A1C1C]">
+            <div className="rounded-[24px] border border-[#E7C7B6] bg-[#FFF7F2] p-4 text-sm text-[#7A3B1C]">
               <p className="font-semibold">George couldn’t connect just now.</p>
               <p className="mt-1">{error}</p>
             </div>

@@ -7,7 +7,8 @@ export default function RulesPage() {
       <PageHero
         eyebrow="Rules"
         title="Fishery rules and essential gear"
-        text="Everything anglers need to know before arriving on site."
+        text="Everything anglers need before they arrive, kept clear and easy to scan."
+        image="/images/island-lake.webp"
       />
       <section className="section container price-sections">
         <div className="panel"><h2>Fishery rules</h2><CheckList items={rules} /></div>

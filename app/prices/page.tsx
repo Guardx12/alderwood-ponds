@@ -6,8 +6,9 @@ export default function PricesPage() {
     <main>
       <PageHero
         eyebrow="Prices"
-        title="Prices 2026"
-        text="Day fishing, night fishing, shelters and camping all on their own page for quick reference."
+        title="Prices for day tickets, nights, cabins and camping"
+        text="All the pricing information kept on its own page for quick reference."
+        image="/images/hero-lake.webp"
       />
       <section className="section container price-sections">
         <div className="panel"><h2>Day tickets</h2><CheckList items={dayTickets} /></div>

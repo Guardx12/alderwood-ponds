@@ -2,6 +2,7 @@ import type { ReactNode } from "react"
 import type { Metadata } from "next"
 import "./globals.css"
 import { SiteFooter, SiteHeader } from "@/components/layout"
+import { HomeChatBubble } from "@/components/home-chat-bubble"
 import { site } from "@/components/site-data"
 
 export const metadata: Metadata = {
@@ -18,6 +19,7 @@ export default function RootLayout({ children }: Readonly<{ children: ReactNode 
       <body>
         <SiteHeader />
         {children}
+        <HomeChatBubble />
         <SiteFooter />
       </body>
     </html>

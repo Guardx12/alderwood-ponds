@@ -6,13 +6,16 @@ export type UpdateItem = {
 
 export const site = {
   name: "Alderwood Ponds",
-  description: "Coarse fishery in Steyning, West Sussex with three waters, day and night fishing, cabins, camping, and clear angler information.",
-  phone: "07713 468264",
+  description:
+    "Family-run coarse fishery in Steyning, West Sussex with three waters, day and night fishing, cabins, camping, and clear visitor information.",
+  phone: "07713468264",
   phoneDisplay: "07713 468264",
+  contactLabel: "Booking line",
   address: "Horsham Road, Steyning, West Sussex BN44 3AA",
   directions:
     "From the A283 Steyning Bypass, take the B2135 Ashurst to Partridge Green Road. The fishery is around 200 yards on the left, opposite Chanctonfold Industrial Estate.",
   hours: "Wednesday to Sunday, 8am–5pm, winter to dusk. May to August open until 7pm. Open bank holiday Mondays.",
+  payment: "Cash only on the bank",
 }
 
 export const fishSizes = [
