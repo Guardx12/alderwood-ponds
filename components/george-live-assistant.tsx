@@ -508,7 +508,7 @@ export function GeorgeLiveAssistant({ variant = "full" }: { variant?: "full" | "
       </div>
 
       <div className={`${isHomepage ? "grid gap-6" : "grid gap-6 lg:grid-cols-[1.2fr_0.8fr]"}`}>
-        <div className={isHomepage ? "overflow-hidden rounded-[28px] border border-white/10 bg-[linear-gradient(180deg,rgba(17,31,26,0.76)_0%,rgba(13,24,20,0.90)_100%)] shadow-[0_24px_80px_rgba(7,14,12,0.28)] backdrop-blur-xl" : "overflow-hidden rounded-[28px] border border-[#D8E2DB] bg-white shadow-[0_20px_60px_rgba(10,24,19,0.08)]"}>
+        <div className={isHomepage ? "overflow-hidden rounded-[28px] border border-white/10 bg-[linear-gradient(180deg,rgba(30,66,52,0.90)_0%,rgba(19,43,35,0.96)_100%)] shadow-[0_24px_80px_rgba(7,14,12,0.28)] backdrop-blur-xl" : "overflow-hidden rounded-[28px] border border-[#D8E2DB] bg-white shadow-[0_20px_60px_rgba(10,24,19,0.08)]"}>
           <div className={isHomepage ? "flex items-center justify-between border-b border-white/10 px-5 py-4 sm:px-6" : "flex items-center justify-between border-b border-[#E1E8E2] px-5 py-4 sm:px-6"}>
             <div>
               <p className={isHomepage ? "text-sm font-semibold text-white" : "text-sm font-semibold text-[#15201B]"}>Live voice conversation</p>
@@ -520,7 +520,7 @@ export function GeorgeLiveAssistant({ variant = "full" }: { variant?: "full" | "
             </div>
           </div>
 
-          <div ref={scrollRef} className={isHomepage ? "max-h-[520px] space-y-4 overflow-y-auto bg-[linear-gradient(180deg,rgba(11,21,18,0.48)_0%,rgba(8,16,13,0.32)_100%)] px-5 py-5 sm:px-6" : "max-h-[520px] space-y-4 overflow-y-auto bg-[#F4F7F4] px-5 py-5 sm:px-6"}>
+          <div ref={scrollRef} className={isHomepage ? "max-h-[520px] space-y-4 overflow-y-auto bg-[linear-gradient(180deg,rgba(11,21,18,0.38)_0%,rgba(8,16,13,0.24)_100%)] px-5 py-5 sm:px-6" : "max-h-[520px] space-y-4 overflow-y-auto bg-[#F4F7F4] px-5 py-5 sm:px-6"}>
             {messages.map((message) => {
               const isAssistant = message.role !== "user"
               return (
