@@ -2,13 +2,29 @@ import Image from "next/image"
 import Link from "next/link"
 import { ReviewMarquee } from "@/components/review-marquee"
 import { facebookUrl, site } from "@/components/site-data"
+import { GeorgeLiveAssistant } from "@/components/george-live-assistant"
 
 export default function HomePage() {
   return (
     <main>
       <section className="hero hero-home">
         <div className="hero-media">
-          <Image src="/images/hero-main.webp" alt="Alderwood Ponds lake view" fill priority className="hero-image" />
+          <Image
+            src="/images/hero-main.webp"
+            alt="Alderwood Ponds lake view"
+            fill
+            priority
+            sizes="100vw"
+            className="hero-image hero-image-desktop"
+          />
+          <Image
+            src="/images/hero-main-mobile.webp"
+            alt="Alderwood Ponds lake view"
+            fill
+            priority
+            sizes="100vw"
+            className="hero-image hero-image-mobile"
+          />
           <div className="hero-overlay" />
         </div>
         <div className="container hero-content">
@@ -61,41 +77,19 @@ export default function HomePage() {
         </article>
       </section>
 
-      <section className="section section-split feature-band homepage-george-band">
+      <section id="george" className="section section-split feature-band homepage-george-band">
         <div className="container george-home-stack">
-          <div className="two-col feature-grid george-top-grid">
-            <div className="feature-copy">
-              <p className="eyebrow dark">Meet George</p>
-              <h2>Ask George about anything.</h2>
+          <div className="homepage-george-intro">
+            <div className="homepage-george-copy">
+              <p className="eyebrow dark">Ask George about anything</p>
+              <h2>Prices, rules, cabins, camping, fishing and more.</h2>
               <p>
-                George is here to help with prices, rules, cabins, camping, fishing, opening times and general questions
-                about Alderwood Ponds.
+                George is here on the homepage to help visitors quickly find information about Alderwood Ponds.
               </p>
-              <div className="hero-actions">
-                <Link href="/meet-george" className="button primary">
-                  Open Meet George
-                </Link>
-              </div>
-            </div>
-            <div className="george-feature-card">
-              <span className="card-kicker">AI fishery assistant</span>
-              <h3>Ask George about prices, rules, cabins, camping or fishing.</h3>
-              <p>
-                Get quick answers, then use the booking line when you need to arrange something directly.
-              </p>
-              <div className="george-chip-row">
-                <span>Prices</span>
-                <span>Rules</span>
-                <span>Cabins</span>
-                <span>Camping</span>
-                <span>Fish</span>
-                <span>Opening times</span>
-              </div>
-              <Link href="/meet-george" className="button primary full">
-                Start with George
-              </Link>
             </div>
           </div>
+
+          <GeorgeLiveAssistant variant="homepage" />
 
           <a href={facebookUrl} target="_blank" rel="noreferrer" className="facebook-feature-card homepage-facebook-card">
             <div className="facebook-logo-badge" aria-hidden="true">f</div>

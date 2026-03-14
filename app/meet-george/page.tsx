@@ -1,5 +1,5 @@
-import { GeorgeLiveAssistant } from "@/components/george-live-assistant"
+import { redirect } from "next/navigation"
 
 export default function MeetGeorgePage() {
-  return <GeorgeLiveAssistant />
+  redirect("/#george")
 }

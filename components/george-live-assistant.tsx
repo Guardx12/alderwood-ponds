@@ -108,7 +108,7 @@ function hasMeaningfulTranscript(messages: LiveMessage[]) {
   return userMessages.length >= 1
 }
 
-export function GeorgeLiveAssistant() {
+export function GeorgeLiveAssistant({ variant = "full" }: { variant?: "full" | "homepage" }) {
   const [messages, setMessages] = useState<LiveMessage[]>(INITIAL_MESSAGES)
   const [connectionState, setConnectionState] = useState<ConnectionState>("idle")
   const [statusText, setStatusText] = useState("Ready when you are")
@@ -471,36 +471,44 @@ export function GeorgeLiveAssistant() {
     setStatusText("Ready when you are")
   }
 
+  const isHomepage = variant === "homepage"
+
   return (
-    <section className="mx-auto flex min-h-[calc(100vh-88px)] w-full max-w-6xl flex-col px-4 pb-10 pt-8 sm:px-6 lg:px-8 lg:pt-10">
-      <div className="mx-auto mb-6 max-w-4xl text-center">
-        <div className="mx-auto mb-5 flex max-w-4xl items-center justify-center overflow-hidden rounded-[28px] border border-[#27463D] bg-[linear-gradient(135deg,#0B1512_0%,#10211B_42%,#1E4D3D_100%)] px-6 py-7 text-left shadow-[0_24px_80px_rgba(7,14,12,0.34)] sm:px-8">
+    <section className={`${isHomepage ? "w-full" : "mx-auto flex min-h-[calc(100vh-88px)] w-full max-w-6xl flex-col px-4 pb-10 pt-8 sm:px-6 lg:px-8 lg:pt-10"}`}>
+      <div className={`${isHomepage ? "mb-5" : "mx-auto mb-6 max-w-4xl text-center"}`}>
+        <div className={`${isHomepage ? "homepage-george-logo-wrap" : "mx-auto mb-5 flex max-w-4xl items-center justify-center overflow-hidden rounded-[28px] border border-[#27463D] bg-[linear-gradient(135deg,#0B1512_0%,#10211B_42%,#1E4D3D_100%)] px-6 py-7 text-left shadow-[0_24px_80px_rgba(7,14,12,0.34)] sm:px-8"}`}>
           <div className="flex w-full flex-col items-center gap-5 text-center">
-            <Image src="/images/george-logo.png" alt="George logo" width={420} height={140} className="h-auto w-full max-w-[320px] sm:max-w-[420px]" priority />
-            <div className="max-w-3xl">
-              <p className="text-xs font-semibold uppercase tracking-[0.26em] text-[#CFE5DA] sm:text-sm">Meet George</p>
-              <h1 className="mt-2 text-3xl font-extrabold tracking-tight text-white sm:text-4xl lg:text-5xl">
-                Your Alderwood Ponds assistant.
-              </h1>
-              <p className="mt-3 max-w-2xl text-sm leading-6 text-[#E3F0EA] sm:text-base sm:leading-7">
-                George answers questions about Alderwood Ponds and helps visitors quickly find the right information about fishing, staying and visiting.
-              </p>
-              <p className="mt-4 text-sm font-semibold text-[#A8D5C1] sm:text-base">
-                Prices • Rules • Fish sizes • Night fishing • Cabins • Camping
-              </p>
-            </div>
+            <Image src="/images/george-logo.png" alt="George logo" width={420} height={140} className={`h-auto w-full ${isHomepage ? "max-w-[210px] sm:max-w-[250px]" : "max-w-[270px] sm:max-w-[360px]"}`} priority />
+            {isHomepage ? null : (
+              <div className="max-w-3xl">
+                <p className="text-xs font-semibold uppercase tracking-[0.26em] text-[#CFE5DA] sm:text-sm">Meet George</p>
+                <h1 className="mt-2 text-3xl font-extrabold tracking-tight text-white sm:text-4xl lg:text-5xl">
+                  Your Alderwood Ponds assistant.
+                </h1>
+                <p className="mt-3 max-w-2xl text-sm leading-6 text-[#E3F0EA] sm:text-base sm:leading-7">
+                  George answers questions about Alderwood Ponds and helps visitors quickly find the right information about fishing, staying and visiting.
+                </p>
+                <p className="mt-4 text-sm font-semibold text-[#A8D5C1] sm:text-base">
+                  Prices • Rules • Fish sizes • Night fishing • Cabins • Camping
+                </p>
+              </div>
+            )}
           </div>
         </div>
 
-        <p className="mx-auto mt-4 max-w-3xl text-base leading-7 text-[#5E6F68] sm:text-lg sm:leading-8">
-          George can help with tickets, opening hours, fish sizes, rules, dog policies, shelters, camping, directions, and general fishery information.
-        </p>
-        <p className="mt-4 text-sm font-semibold text-[#1E6B51] sm:text-base">
-          Try asking George about prices, rules, night fishing, cabins, camping, or which pond might suit you best.
-        </p>
+        {isHomepage ? null : (
+          <>
+            <p className="mx-auto mt-4 max-w-3xl text-base leading-7 text-[#5E6F68] sm:text-lg sm:leading-8">
+              George can help with tickets, opening hours, fish sizes, rules, dog policies, shelters, camping, directions, and general fishery information.
+            </p>
+            <p className="mt-4 text-sm font-semibold text-[#1E6B51] sm:text-base">
+              Try asking George about prices, rules, night fishing, cabins, camping, or which pond might suit you best.
+            </p>
+          </>
+        )}
       </div>
 
-      <div className="grid gap-6 lg:grid-cols-[1.2fr_0.8fr]">
+      <div className={`${isHomepage ? "grid gap-6" : "grid gap-6 lg:grid-cols-[1.2fr_0.8fr]"}`}>
         <div className="overflow-hidden rounded-[28px] border border-[#D8E2DB] bg-white shadow-[0_20px_60px_rgba(10,24,19,0.08)]">
           <div className="flex items-center justify-between border-b border-[#E1E8E2] px-5 py-4 sm:px-6">
             <div>
@@ -577,6 +585,7 @@ export function GeorgeLiveAssistant() {
           </div>
         </div>
 
+        {isHomepage ? null : (
         <aside className="space-y-4">
           <div className="rounded-[28px] border border-[#D8E2DB] bg-white p-6 shadow-[0_20px_60px_rgba(17,24,39,0.08)]">
             <h2 className="text-lg font-semibold text-[#15201B]">What George knows</h2>
@@ -615,6 +624,7 @@ export function GeorgeLiveAssistant() {
             </div>
           ) : null}
         </aside>
+        )}
       </div>
     </section>
   )
