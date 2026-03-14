@@ -1,6 +1,5 @@
 "use client"
 
-import Image from "next/image"
 import { useEffect, useMemo, useRef, useState } from "react"
 import { Loader2, Mic, PhoneOff, Radio, Volume2 } from "lucide-react"
 
@@ -475,11 +474,11 @@ export function GeorgeLiveAssistant({ variant = "full" }: { variant?: "full" | "
 
   return (
     <section className={`${isHomepage ? "w-full" : "mx-auto flex min-h-[calc(100vh-88px)] w-full max-w-6xl flex-col px-4 pb-10 pt-8 sm:px-6 lg:px-8 lg:pt-10"}`}>
-      <div className={`${isHomepage ? "mb-5" : "mx-auto mb-6 max-w-4xl text-center"}`}>
-        <div className={`${isHomepage ? "homepage-george-logo-wrap" : "mx-auto mb-5 flex max-w-4xl items-center justify-center overflow-hidden rounded-[28px] border border-[#27463D] bg-[linear-gradient(135deg,#0B1512_0%,#10211B_42%,#1E4D3D_100%)] px-6 py-7 text-left shadow-[0_24px_80px_rgba(7,14,12,0.34)] sm:px-8"}`}>
-          <div className="flex w-full flex-col items-center gap-5 text-center">
-            <Image src="/images/george-logo.png" alt="George logo" width={420} height={140} className={`h-auto w-full ${isHomepage ? "max-w-[210px] sm:max-w-[250px]" : "max-w-[270px] sm:max-w-[360px]"}`} priority />
-            {isHomepage ? null : (
+      <div className={`${isHomepage ? "mb-2" : "mx-auto mb-6 max-w-4xl text-center"}`}>
+        {isHomepage ? null : (
+          <div className="mx-auto mb-5 flex max-w-4xl items-center justify-center overflow-hidden rounded-[28px] border border-[#27463D] bg-[linear-gradient(135deg,#0B1512_0%,#10211B_42%,#1E4D3D_100%)] px-6 py-7 text-left shadow-[0_24px_80px_rgba(7,14,12,0.34)] sm:px-8">
+            <div className="flex w-full flex-col items-center gap-5 text-center">
+              <img src="/images/george-logo.png" alt="George logo" width={420} height={140} className="h-auto w-full max-w-[270px] sm:max-w-[360px]" />
               <div className="max-w-3xl">
                 <p className="text-xs font-semibold uppercase tracking-[0.26em] text-[#CFE5DA] sm:text-sm">Meet George</p>
                 <h1 className="mt-2 text-3xl font-extrabold tracking-tight text-white sm:text-4xl lg:text-5xl">
@@ -492,9 +491,9 @@ export function GeorgeLiveAssistant({ variant = "full" }: { variant?: "full" | "
                   Prices • Rules • Fish sizes • Night fishing • Cabins • Camping
                 </p>
               </div>
-            )}
+            </div>
           </div>
-        </div>
+        )}
 
         {isHomepage ? null : (
           <>
