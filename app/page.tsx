@@ -19,9 +19,6 @@ export default function HomePage() {
             then ask George about prices, rules, cabins, camping, fishing and more.
           </p>
           <div className="hero-actions">
-            <Link href="/meet-george" className="button primary">
-              Ask George now
-            </Link>
             <Link href="/prices" className="button secondary">
               View prices
             </Link>

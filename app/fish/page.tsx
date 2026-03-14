@@ -8,7 +8,7 @@ export default function FishPage() {
         eyebrow="Fish"
         title="Fish sizes and waters"
         text="Three waters on site with carp to 38lb 8oz, tench, perch, roach, rudd and golden orfe."
-        image="/images/hero-main.webp"
+        image="/images/fish-page.webp"
       />
       <section className="section container two-col">
         <div className="panel">

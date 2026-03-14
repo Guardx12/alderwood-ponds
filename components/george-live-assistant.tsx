@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image"
 import { useEffect, useMemo, useRef, useState } from "react"
 import { Loader2, Mic, PhoneOff, Radio, Volume2 } from "lucide-react"
 
@@ -474,30 +475,28 @@ export function GeorgeLiveAssistant() {
     <section className="mx-auto flex min-h-[calc(100vh-88px)] w-full max-w-6xl flex-col px-4 pb-10 pt-8 sm:px-6 lg:px-8 lg:pt-10">
       <div className="mx-auto mb-6 max-w-4xl text-center">
         <div className="mx-auto mb-5 flex max-w-4xl items-center justify-center overflow-hidden rounded-[28px] border border-[#27463D] bg-[linear-gradient(135deg,#0B1512_0%,#10211B_42%,#1E4D3D_100%)] px-6 py-7 text-left shadow-[0_24px_80px_rgba(7,14,12,0.34)] sm:px-8">
-          <div className="max-w-3xl">
-            <p className="text-xs font-semibold uppercase tracking-[0.26em] text-[#CFE5DA] sm:text-sm">Meet George</p>
-            <h1 className="mt-2 text-3xl font-extrabold tracking-tight text-white sm:text-4xl lg:text-5xl">
-              Your Alderwood Ponds assistant.
-            </h1>
-            <p className="mt-3 max-w-2xl text-sm leading-6 text-[#E3F0EA] sm:text-base sm:leading-7">
-              George answers questions about Alderwood Ponds, explains the rules, and helps visitors quickly find the right information about fishing, staying and visiting.
-            </p>
-            <p className="mt-4 text-sm font-semibold text-[#A8D5C1] sm:text-base">
-              Prices • Rules • Fish sizes • Night fishing • Cabins • Camping
-            </p>
+          <div className="flex w-full flex-col items-center gap-5 text-center">
+            <Image src="/images/george-logo.png" alt="George logo" width={420} height={140} className="h-auto w-full max-w-[320px] sm:max-w-[420px]" priority />
+            <div className="max-w-3xl">
+              <p className="text-xs font-semibold uppercase tracking-[0.26em] text-[#CFE5DA] sm:text-sm">Meet George</p>
+              <h1 className="mt-2 text-3xl font-extrabold tracking-tight text-white sm:text-4xl lg:text-5xl">
+                Your Alderwood Ponds assistant.
+              </h1>
+              <p className="mt-3 max-w-2xl text-sm leading-6 text-[#E3F0EA] sm:text-base sm:leading-7">
+                George answers questions about Alderwood Ponds and helps visitors quickly find the right information about fishing, staying and visiting.
+              </p>
+              <p className="mt-4 text-sm font-semibold text-[#A8D5C1] sm:text-base">
+                Prices • Rules • Fish sizes • Night fishing • Cabins • Camping
+              </p>
+            </div>
           </div>
         </div>
 
-        <p className="mt-4 text-xl font-medium text-[#15201B] sm:text-2xl">Meet George in the same calm, dark-green theme.</p>
         <p className="mx-auto mt-4 max-w-3xl text-base leading-7 text-[#5E6F68] sm:text-lg sm:leading-8">
-          George is the AI assistant built into the Alderwood Ponds website. He can talk through tickets, opening
-          hours, fish sizes, rules, dog policies, shelters, camping, directions, and general fishery information.
+          George can help with tickets, opening hours, fish sizes, rules, dog policies, shelters, camping, directions, and general fishery information.
         </p>
         <p className="mt-4 text-sm font-semibold text-[#1E6B51] sm:text-base">
           Try asking George about prices, rules, night fishing, cabins, camping, or which pond might suit you best.
-        </p>
-        <p className="mt-3 text-sm text-[#5E6F68]">
-          On the home page George stays as the smaller assistant in the bottom-right corner. This is his full-page version.
         </p>
       </div>
 

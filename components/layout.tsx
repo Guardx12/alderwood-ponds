@@ -37,7 +37,7 @@ export function SiteFooter() {
     <footer className="site-footer">
       <div className="container footer-grid">
         <div>
-          <p className="footer-kicker">A quiet, polished fishery website for anglers and visitors</p>
+          <p className="footer-kicker">Family-run coarse fishery in Steyning, West Sussex</p>
           <h3>{site.name}</h3>
           <p>{site.description}</p>
         </div>
