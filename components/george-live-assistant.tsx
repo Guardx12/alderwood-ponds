@@ -508,19 +508,19 @@ export function GeorgeLiveAssistant({ variant = "full" }: { variant?: "full" | "
       </div>
 
       <div className={`${isHomepage ? "grid gap-6" : "grid gap-6 lg:grid-cols-[1.2fr_0.8fr]"}`}>
-        <div className="overflow-hidden rounded-[28px] border border-[#D8E2DB] bg-white shadow-[0_20px_60px_rgba(10,24,19,0.08)]">
-          <div className="flex items-center justify-between border-b border-[#E1E8E2] px-5 py-4 sm:px-6">
+        <div className={isHomepage ? "overflow-hidden rounded-[28px] border border-white/10 bg-[linear-gradient(180deg,rgba(17,31,26,0.76)_0%,rgba(13,24,20,0.90)_100%)] shadow-[0_24px_80px_rgba(7,14,12,0.28)] backdrop-blur-xl" : "overflow-hidden rounded-[28px] border border-[#D8E2DB] bg-white shadow-[0_20px_60px_rgba(10,24,19,0.08)]"}>
+          <div className={isHomepage ? "flex items-center justify-between border-b border-white/10 px-5 py-4 sm:px-6" : "flex items-center justify-between border-b border-[#E1E8E2] px-5 py-4 sm:px-6"}>
             <div>
-              <p className="text-sm font-semibold text-[#15201B]">Live voice conversation</p>
-              <p className="mt-1 text-sm text-[#5E6F68]">Speak naturally — George listens and replies out loud.</p>
+              <p className={isHomepage ? "text-sm font-semibold text-white" : "text-sm font-semibold text-[#15201B]"}>Live voice conversation</p>
+              <p className={isHomepage ? "mt-1 text-sm text-[#C8D8D0]" : "mt-1 text-sm text-[#5E6F68]"}>Speak naturally — George listens and replies out loud.</p>
             </div>
-            <div className="inline-flex items-center gap-2 rounded-full bg-[#EFF6F1] px-3 py-1 text-xs font-semibold text-[#1E6B51]">
+            <div className={isHomepage ? "inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/8 px-3 py-1 text-xs font-semibold text-[#D6E6DF]" : "inline-flex items-center gap-2 rounded-full bg-[#EFF6F1] px-3 py-1 text-xs font-semibold text-[#1E6B51]"}>
               <Radio className="h-3.5 w-3.5" />
               {statusText}
             </div>
           </div>
 
-          <div ref={scrollRef} className="max-h-[520px] space-y-4 overflow-y-auto bg-[#F4F7F4] px-5 py-5 sm:px-6">
+          <div ref={scrollRef} className={isHomepage ? "max-h-[520px] space-y-4 overflow-y-auto bg-[linear-gradient(180deg,rgba(11,21,18,0.48)_0%,rgba(8,16,13,0.32)_100%)] px-5 py-5 sm:px-6" : "max-h-[520px] space-y-4 overflow-y-auto bg-[#F4F7F4] px-5 py-5 sm:px-6"}>
             {messages.map((message) => {
               const isAssistant = message.role !== "user"
               return (
@@ -528,8 +528,12 @@ export function GeorgeLiveAssistant({ variant = "full" }: { variant?: "full" | "
                   key={message.id}
                   className={`max-w-[88%] rounded-3xl px-4 py-3 text-sm leading-6 shadow-sm sm:text-[15px] ${
                     isAssistant
-                      ? "mr-auto bg-white text-[#15201B] border border-[#E1E8E2]"
-                      : "ml-auto bg-[#1E5A46] text-white"
+                      ? isHomepage
+                        ? "mr-auto border border-white/10 bg-[rgba(236,244,240,0.10)] text-[#F4F8F6]"
+                        : "mr-auto bg-white text-[#15201B] border border-[#E1E8E2]"
+                      : isHomepage
+                        ? "ml-auto bg-[#2A6A51] text-white"
+                        : "ml-auto bg-[#1E5A46] text-white"
                   }`}
                 >
                   <p className="mb-1 text-[11px] font-semibold uppercase tracking-[0.18em] opacity-70">
@@ -541,12 +545,12 @@ export function GeorgeLiveAssistant({ variant = "full" }: { variant?: "full" | "
             })}
           </div>
 
-          <div className="flex flex-wrap items-center gap-3 border-t border-[#E1E8E2] px-5 py-4 sm:px-6">
+          <div className={isHomepage ? "flex flex-wrap items-center gap-3 border-t border-white/10 px-5 py-4 sm:px-6" : "flex flex-wrap items-center gap-3 border-t border-[#E1E8E2] px-5 py-4 sm:px-6"}>
             {connectionState !== "connected" ? (
               <button
                 onClick={startConversation}
                 disabled={!canStart}
-                className="inline-flex items-center gap-2 rounded-full bg-[#1E5A46] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#174838] disabled:cursor-not-allowed disabled:opacity-60"
+                className={isHomepage ? "inline-flex items-center gap-2 rounded-full bg-[#2D7357] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#235844] disabled:cursor-not-allowed disabled:opacity-60" : "inline-flex items-center gap-2 rounded-full bg-[#1E5A46] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#174838] disabled:cursor-not-allowed disabled:opacity-60"}
               >
                 {connectionState === "connecting" ? (
                   <>
@@ -563,21 +567,21 @@ export function GeorgeLiveAssistant({ variant = "full" }: { variant?: "full" | "
             ) : (
               <button
                 onClick={stopConversation}
-                className="inline-flex items-center gap-2 rounded-full bg-[#13211C] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#0B1512]"
+                className={isHomepage ? "inline-flex items-center gap-2 rounded-full bg-[#101C18] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#0B1512]" : "inline-flex items-center gap-2 rounded-full bg-[#13211C] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#0B1512]"}
               >
                 <PhoneOff className="h-4 w-4" />
                 End conversation
               </button>
             )}
 
-            <div className="inline-flex items-center gap-2 rounded-full border border-[#D8E2DB] bg-white px-4 py-2 text-sm text-[#365046]">
-              <Volume2 className="h-4 w-4 text-[#1E6B51]" />
+            <div className={isHomepage ? "inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/8 px-4 py-2 text-sm text-[#D6E6DF]" : "inline-flex items-center gap-2 rounded-full border border-[#D8E2DB] bg-white px-4 py-2 text-sm text-[#365046]"}>
+              <Volume2 className={isHomepage ? "h-4 w-4 text-[#8FD2B2]" : "h-4 w-4 text-[#1E6B51]"} />
               Voice enabled
             </div>
 
             {isModelSpeaking ? (
-              <div className="inline-flex items-center gap-2 rounded-full border border-[#D8E2DB] bg-white px-4 py-2 text-sm text-[#365046]">
-                <Loader2 className="h-4 w-4 animate-spin text-[#1E6B51]" />
+              <div className={isHomepage ? "inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/8 px-4 py-2 text-sm text-[#D6E6DF]" : "inline-flex items-center gap-2 rounded-full border border-[#D8E2DB] bg-white px-4 py-2 text-sm text-[#365046]"}>
+                <Loader2 className={isHomepage ? "h-4 w-4 animate-spin text-[#8FD2B2]" : "h-4 w-4 animate-spin text-[#1E6B51]"} />
                 George is speaking
               </div>
             ) : null}

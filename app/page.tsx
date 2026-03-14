@@ -104,8 +104,15 @@ export default function HomePage() {
             <div className="homepage-review-heading">
               <span>Visitor reviews</span>
               <h3>What anglers say about Alderwood Ponds</h3>
+              <p>Enjoyed your visit? We would really appreciate a quick Google review.</p>
             </div>
             <ReviewMarquee compact />
+            <div className="review-cta-row">
+              <a href={site.googleReviewUrl} target="_blank" rel="noreferrer" className="google-review-link">
+                <span className="google-logo-badge" aria-hidden="true">G</span>
+                <span>{site.googleReviewsLabel}</span>
+              </a>
+            </div>
           </div>
         </div>
       </section>
