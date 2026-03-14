@@ -16,6 +16,7 @@ export const site = {
     "From the A283 Steyning Bypass, take the B2135 Ashurst to Partridge Green Road. The fishery is around 200 yards on the left, opposite Chanctonfold Industrial Estate.",
   hours: "Wednesday to Sunday, 8am–5pm, winter to dusk. May to August open until 7pm. Open bank holiday Mondays.",
   payment: "Cash only on the bank",
+  facebookUrl: "https://www.facebook.com/profile.php?id=100063585396887&locale=en_GB",
 }
 
 export const fishSizes = [
@@ -188,5 +189,106 @@ export const updates: UpdateItem[] = [
     title: "Fishing report Feb 2025",
     date: "14 Feb 2025",
     text: "Reported captures included a 14lb 8oz common, a 12lb 4oz leather, and a 3lb 7oz perch.",
+  },
+]
+
+
+export const facebookUrl = "https://www.facebook.com/profile.php?id=100063585396887&locale=en_GB"
+
+export const reviews = [
+  {
+    name: "A STEEZY",
+    when: "2 months ago",
+    text: "Great lake to fish, so many fish showing. Tough to catch them in winter, but a great fishery overall with three lakes.",
+  },
+  {
+    name: "David Baggott",
+    when: "Edited 3 months ago",
+    text: "Fantastic place worth a visit with good perch, roach and carp. The owners are great, and if you play by the rules you will have a brilliant time.",
+  },
+  {
+    name: "Chris Skillings",
+    when: "3 months ago",
+    text: "I have been to Alderwood Ponds many times over the last 10 years with my son. An excellent day’s fishing is always guaranteed.",
+  },
+  {
+    name: "Lynn H",
+    when: "3 months ago",
+    text: "Love fishing here. Fabulous, friendly and helpful owners, lovely relaxing lakes, and the toilet and shower facilities are clean and tidy.",
+  },
+  {
+    name: "Lee Fisher's All Ways Fishing",
+    when: "3 months ago",
+    text: "A nice little day ticket venue nestled in the Sussex countryside. The owners are extremely pleasant and helpful.",
+  },
+  {
+    name: "Mick Dennis",
+    when: "3 months ago",
+    text: "A family-run fishery where I’ve always been made to feel very welcome over many years of fishing here.",
+  },
+  {
+    name: "JDR Ltd",
+    when: "3 months ago",
+    text: "Been to Alderwood many times and stayed in both cabins. Plenty of fish come out, and the lake at dusk is a lovely place to be.",
+  },
+  {
+    name: "Donella C-S",
+    when: "3 months ago",
+    text: "One of our favourite lakes to fish. Julie is so lovely and friendly.",
+  },
+  {
+    name: "Biker-83",
+    when: "a year ago",
+    text: "Loved every minute of our 24-hour stay in the old cabin. We caught some beautiful carp and can’t wait to go there again.",
+  },
+  {
+    name: "Paul Smith",
+    when: "a year ago",
+    text: "Stunning venue, lovely people, well stocked lakes. What’s not to like?",
+  },
+  {
+    name: "John Fleming",
+    when: "2 years ago",
+    text: "Great venue with friendly owners and some nice fish — altogether a big thumbs up.",
+  },
+  {
+    name: "Paul Flint",
+    when: "2 years ago",
+    text: "An amazing fishery, very well run by people who care about the fish and surroundings. The owners are so helpful.",
+  },
+  {
+    name: "Scott Collins",
+    when: "2 years ago",
+    text: "Alderwood is a very lovely and friendly place. The staff are very nice and always willing to have a chat, and the fishing is really good.",
+  },
+  {
+    name: "James Davis",
+    when: "3 years ago",
+    text: "This has to be the best fishery I’ve visited. The lakes are incredibly productive and the staff are excellent.",
+  },
+  {
+    name: "Ben trimm",
+    when: "3 years ago",
+    text: "Our first 24 hours at Alderwood were brilliant. The cabin was warm and comfortable, the ladies were very friendly, and the lakes are well maintained.",
+  },
+  {
+    name: "Mark Hayley",
+    when: "3 years ago",
+    text: "A beautiful set of lakes in the South Downs, meticulously looked after by owners who care deeply about their fish and wildlife.",
+  },
+  {
+    name: "Robert Allen",
+    when: "3 years ago",
+    text: "Robins Retreat was really clean and comfortable, and the ladies were friendly and knowledgeable about the fishing.",
+  },
+  {
+    name: "Colin Flood",
+    when: "4 years ago",
+    text: "Lovely private fishery with three lakes, very well kept and run by friendly owners. Lots of different species of fish.",
+  },
+  {
+    name: "Keith Palmer",
+    when: "4 years ago",
+    text: "Just love this place — good fishing and lovely owners.",
   },
 ]

@@ -27,9 +27,6 @@ export function SiteHeader() {
             </Link>
           ))}
         </nav>
-        <a href={`tel:${site.phone}`} className="header-booking-pill">
-          {site.contactLabel}
-        </a>
       </div>
     </header>
   )
@@ -58,10 +55,10 @@ export function SiteFooter() {
           <p>{site.hours}</p>
         </div>
         <div>
-          <h4>Built by</h4>
+          <h4>Recent reports</h4>
           <p>
-            <a href="https://www.guardxnetwork.com" target="_blank" rel="noreferrer">
-              Built with an AI assistant by GuardX
+            <a href={site.facebookUrl ?? "https://www.facebook.com/profile.php?id=100063585396887&locale=en_GB"} target="_blank" rel="noreferrer">
+              Please see Facebook for recent reports
             </a>
           </p>
         </div>
