@@ -19,6 +19,8 @@ export const site = {
   facebookUrl: "https://www.facebook.com/profile.php?id=100063585396887&locale=en_GB",
   googleReviewUrl: "https://www.google.com/search?q=alderwood+ponds%2C+fishing%2C+cabins+%26+camping+hookups+reviews#lrd=0x4875965efaa970c5:0x7c57799adaadd918,3,,,,",
   googleReviewsLabel: "Leave us a Google review",
+  siteUrl: "https://alderwoodponds.fish",
+  ogImage: "/og-preview.jpg",
 }
 
 export const fishSizes = [

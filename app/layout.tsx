@@ -30,11 +30,38 @@ const localBusinessSchema = {
 }
 
 export const metadata: Metadata = {
+  metadataBase: new URL(site.siteUrl),
   title: {
     default: "Alderwood Ponds",
     template: "%s | Alderwood Ponds",
   },
   description: site.description,
+  applicationName: "Alderwood Ponds",
+  openGraph: {
+    title: "Alderwood Ponds – Fishing, Cabins & Camping",
+    description: "Three beautiful fishing lakes in the Sussex countryside with cabins, camping, reports, and George ready to help.",
+    url: site.siteUrl,
+    siteName: "Alderwood Ponds",
+    images: [
+      {
+        url: site.ogImage,
+        width: 1200,
+        height: 630,
+        alt: "Alderwood Ponds aerial-style lake preview",
+      },
+    ],
+    locale: "en_GB",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Alderwood Ponds – Fishing, Cabins & Camping",
+    description: "Fishing lakes, cabins and camping in Sussex. Ask George about prices, rules and availability.",
+    images: [site.ogImage],
+  },
+  alternates: {
+    canonical: "/",
+  },
 }
 
 export default function RootLayout({ children }: Readonly<{ children: ReactNode }>) {
