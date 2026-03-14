@@ -460,6 +460,33 @@ h1, h2, h3, h4, .brand { font-family: Georgia, "Times New Roman", serif; letter-
   font-size: 0.92rem;
   line-height: 1.45;
 }
+.home-chat-icon {
+  position: relative;
+  overflow: visible;
+}
+.home-chat-icon::before,
+.home-chat-icon::after {
+  content: "";
+  position: absolute;
+  inset: -6px;
+  border-radius: 999px;
+  border: 2px solid rgba(102, 191, 149, 0.48);
+  opacity: 0;
+  pointer-events: none;
+}
+.home-chat-icon::before {
+  animation: george-ring 1.9s ease-out infinite;
+}
+.home-chat-icon::after {
+  animation: george-ring 1.9s ease-out infinite 0.9s;
+}
+.homepage-george-prompt {
+  margin: 0 0 12px;
+  color: #dcebe4;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
 
 @media (max-width: 1080px) {
   .site-header-inner { grid-template-columns: 1fr; }
@@ -861,40 +888,103 @@ h1, h2, h3, h4, .brand { font-family: Georgia, "Times New Roman", serif; letter-
 
 
 .home-chat-icon {
-  animation: george-pulse 2.8s ease-in-out infinite;
-  box-shadow: 0 0 0 0 rgba(47, 108, 82, 0.45), 0 10px 24px rgba(8, 17, 14, 0.28);
+  animation: george-pulse 1.45s ease-in-out infinite;
+  box-shadow: 0 0 0 0 rgba(76, 166, 125, 0.5), 0 10px 24px rgba(8, 17, 14, 0.34);
 }
 .homepage-start-button {
   position: relative;
-  animation: george-cta-glow 2.6s ease-in-out infinite;
-  box-shadow: 0 10px 30px rgba(23, 68, 52, 0.34);
+  overflow: visible;
+  animation: george-cta-flash 1.2s ease-in-out infinite;
+  box-shadow: 0 12px 34px rgba(23, 68, 52, 0.4);
+}
+.homepage-start-button::before,
+.homepage-start-button::after {
+  content: "";
+  position: absolute;
+  inset: -7px;
+  border-radius: 999px;
+  border: 2px solid rgba(143, 210, 178, 0.5);
+  opacity: 0;
+  pointer-events: none;
+}
+.homepage-start-button::before {
+  animation: george-button-ring 1.5s ease-out infinite;
+}
+.homepage-start-button::after {
+  animation: george-button-ring 1.5s ease-out infinite 0.75s;
 }
 .homepage-start-button:hover {
-  transform: translateY(-1px) scale(1.01);
+  transform: translateY(-1px) scale(1.02);
 }
 @keyframes george-pulse {
   0%, 100% {
     transform: scale(1);
-    box-shadow: 0 0 0 0 rgba(47, 108, 82, 0.0), 0 10px 24px rgba(8, 17, 14, 0.28);
+    box-shadow: 0 0 0 0 rgba(76, 166, 125, 0), 0 10px 24px rgba(8, 17, 14, 0.34);
   }
-  50% {
-    transform: scale(1.08);
-    box-shadow: 0 0 0 10px rgba(47, 108, 82, 0.0), 0 14px 30px rgba(8, 17, 14, 0.34);
+  40% {
+    transform: scale(1.1);
+    box-shadow: 0 0 0 12px rgba(76, 166, 125, 0), 0 16px 34px rgba(8, 17, 14, 0.42);
+  }
+  70% {
+    transform: scale(1.02);
+    box-shadow: 0 0 0 0 rgba(76, 166, 125, 0), 0 12px 26px rgba(8, 17, 14, 0.36);
   }
 }
-@keyframes george-cta-glow {
-  0%, 100% {
-    filter: brightness(1);
-    box-shadow: 0 10px 30px rgba(23, 68, 52, 0.32), 0 0 0 0 rgba(143, 210, 178, 0);
+@keyframes george-ring {
+  0% {
+    transform: scale(0.88);
+    opacity: 0;
   }
-  50% {
+  20% {
+    opacity: 0.75;
+  }
+  100% {
+    transform: scale(1.52);
+    opacity: 0;
+  }
+}
+@keyframes george-cta-flash {
+  0%, 100% {
+    transform: scale(1);
+    filter: brightness(1);
+    box-shadow: 0 12px 34px rgba(23, 68, 52, 0.38), 0 0 0 0 rgba(143, 210, 178, 0);
+  }
+  20% {
+    transform: scale(1.02);
     filter: brightness(1.08);
-    box-shadow: 0 14px 34px rgba(23, 68, 52, 0.4), 0 0 0 8px rgba(143, 210, 178, 0);
+    box-shadow: 0 18px 40px rgba(23, 68, 52, 0.44), 0 0 18px rgba(143, 210, 178, 0.28);
+  }
+  45% {
+    transform: scale(1.04);
+    filter: brightness(1.16);
+    box-shadow: 0 22px 48px rgba(23, 68, 52, 0.5), 0 0 24px rgba(143, 210, 178, 0.38);
+  }
+  70% {
+    transform: scale(1.01);
+    filter: brightness(1.06);
+    box-shadow: 0 14px 36px rgba(23, 68, 52, 0.42), 0 0 12px rgba(143, 210, 178, 0.18);
+  }
+}
+@keyframes george-button-ring {
+  0% {
+    transform: scale(0.96);
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.82;
+  }
+  100% {
+    transform: scale(1.15);
+    opacity: 0;
   }
 }
 @media (prefers-reduced-motion: reduce) {
   .home-chat-icon,
-  .homepage-start-button {
+  .homepage-start-button,
+  .home-chat-icon::before,
+  .home-chat-icon::after,
+  .homepage-start-button::before,
+  .homepage-start-button::after {
     animation: none;
   }
 }

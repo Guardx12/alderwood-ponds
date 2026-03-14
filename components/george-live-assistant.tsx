@@ -545,12 +545,17 @@ export function GeorgeLiveAssistant({ variant = "full" }: { variant?: "full" | "
             })}
           </div>
 
-          <div className={isHomepage ? "flex flex-wrap items-center gap-3 border-t border-white/10 px-5 py-4 sm:px-6" : "flex flex-wrap items-center gap-3 border-t border-[#E1E8E2] px-5 py-4 sm:px-6"}>
+          <div className={isHomepage ? "border-t border-white/10 px-5 py-4 sm:px-6" : "border-t border-[#E1E8E2] px-5 py-4 sm:px-6"}>
+            {isHomepage ? (
+              <p className="homepage-george-prompt">Have a question? Ask George instantly.</p>
+            ) : null}
+
+            <div className="flex flex-wrap items-center gap-3">
             {connectionState !== "connected" ? (
               <button
                 onClick={startConversation}
                 disabled={!canStart}
-                className={isHomepage ? "inline-flex items-center gap-2 rounded-full bg-[#2D7357] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#235844] disabled:cursor-not-allowed disabled:opacity-60" : "inline-flex items-center gap-2 rounded-full bg-[#1E5A46] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#174838] disabled:cursor-not-allowed disabled:opacity-60"}
+                className={isHomepage ? "homepage-start-button inline-flex items-center gap-2 rounded-full bg-[#2D7357] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#235844] disabled:cursor-not-allowed disabled:opacity-60" : "inline-flex items-center gap-2 rounded-full bg-[#1E5A46] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#174838] disabled:cursor-not-allowed disabled:opacity-60"}
               >
                 {connectionState === "connecting" ? (
                   <>
@@ -585,6 +590,7 @@ export function GeorgeLiveAssistant({ variant = "full" }: { variant?: "full" | "
                 George is speaking
               </div>
             ) : null}
+            </div>
           </div>
         </div>
 
