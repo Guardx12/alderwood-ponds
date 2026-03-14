@@ -49,11 +49,10 @@ export function SiteFooter() {
           <h4>Opening</h4>
           <p>{site.hours}</p>
         </div>
-      </div>
-      <div className="container footer-credit">
-        <a href="https://www.guardxnetwork.com" target="_blank" rel="noreferrer">
-          Built with an AI assistant by GuardX
-        </a>
+        <div>
+          <h4>Built by</h4>
+          <p><a href="https://www.guardxnetwork.com" target="_blank" rel="noreferrer">Built with an AI assistant by GuardX</a></p>
+        </div>
       </div>
     </footer>
   )

@@ -1,4 +1,3 @@
-import Image from "next/image"
 import { CheckList, PageHero } from "@/components/layout"
 import { cabins, camping } from "@/components/site-data"
 
@@ -8,27 +7,22 @@ export default function StayPage() {
       <PageHero
         eyebrow="Stay on site"
         title="Cabins and camping"
-        text="Fishing stays with reserved swims plus camping details and check-in information."
+        text="Fishing shelters with reserved swims plus camping from May to September."
       />
       <section className="section container two-col">
-        <div className="panel visual-panel">
-          <div className="visual-thumb large-thumb">
-            <Image src="/images/gallery/robins-retreat.jpg" alt="Robins Retreat cabin at Alderwood Ponds" fill className="image-fill" />
-          </div>
-          <h2>Cabins with reserved swims</h2>
+        <div className="panel">
+          <h2>Fishing shelters with reserved swims</h2>
           <p className="panel-copy">
-            Anglers Rest and Robins Retreat both include two reserved swims with up to three rods each and 24-hour
-            fishing included.
+            Robins Retreat is situated lakeside with your own reserved swim in front and fishing included day and night.
+            Anglers Rest is situated by the camping field with parking all year round and a reserved swim in front.
           </p>
           <CheckList items={cabins} />
         </div>
-        <div className="panel visual-panel">
-          <div className="visual-thumb large-thumb">
-            <Image src="/images/gallery/static-caravan.jpg" alt="Camping and caravan pitch at Alderwood Ponds" fill className="image-fill" />
-          </div>
+        <div className="panel">
           <h2>Camping</h2>
           <p className="panel-copy">
-            Caravans, campers and tents are welcome, with day fishing tickets bought separately on the bank.
+            Caravans, campers and tents are welcome from May to September. Fishing is not included with camping and
+            tickets should be bought separately on the bank from the bailiff.
           </p>
           <CheckList items={camping} />
         </div>

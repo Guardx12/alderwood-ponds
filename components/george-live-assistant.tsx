@@ -586,7 +586,7 @@ export function GeorgeLiveAssistant() {
               <li>Ticket prices for day fishing, night fishing, guests, dogs, cabins, and camping.</li>
               <li>Fish sizes, ponds on site, disabled access, opening hours, and payment information.</li>
               <li>Fishery rules, required gear, dog rules, cabin details, camping details, and directions.</li>
-              <li>General fishery information, nearby guidance, directions and practical visitor details.</li>
+              <li>Recent reports and general information about Alderwood Ponds.</li>
             </ul>
           </div>
 
