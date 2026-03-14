@@ -43,11 +43,11 @@ export default function HomePage() {
             <span>Opening times available below</span>
             <span>Booking line</span>
             <span>Cash on the bank</span>
-            <span>Please see Facebook for recent reports</span>
+            <span>Please see Facebook for reports, news & updates</span>
           </div>
           <a href={facebookUrl} target="_blank" rel="noreferrer" className="facebook-inline-note">
             <span className="facebook-mini-logo" aria-hidden="true">f</span>
-            <span>Please see Facebook for recent reports</span>
+            <span>Please see Facebook for reports, news & updates</span>
           </a>
         </div>
       </section>
@@ -95,7 +95,7 @@ export default function HomePage() {
             <div className="facebook-logo-badge" aria-hidden="true">f</div>
             <div>
               <span className="card-kicker">Recent reports</span>
-              <h3>Please see Facebook for recent reports.</h3>
+              <h3>Please see Facebook for reports, news & updates.</h3>
               <p>For the latest catch updates and more recent fishery news, head straight to the Alderwood Ponds Facebook page.</p>
             </div>
           </a>

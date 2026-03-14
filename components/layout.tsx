@@ -54,7 +54,7 @@ export function SiteFooter() {
           <p>{site.hours}</p>
         </div>
         <div>
-          <h4>Reviews & reports</h4>
+          <h4>Reviews, reports & updates</h4>
           <div className="footer-link-stack">
             <a href={site.googleReviewUrl} target="_blank" rel="noreferrer" className="footer-brand-link">
               <span className="google-logo-badge small" aria-hidden="true">G</span>
@@ -62,7 +62,7 @@ export function SiteFooter() {
             </a>
             <a href={site.facebookUrl ?? "https://www.facebook.com/profile.php?id=100063585396887&locale=en_GB"} target="_blank" rel="noreferrer" className="footer-brand-link">
               <span className="facebook-mini-logo" aria-hidden="true">f</span>
-              <span>Please see Facebook for recent reports</span>
+              <span>Facebook – reports, news & updates</span>
             </a>
           </div>
         </div>

@@ -858,3 +858,43 @@ h1, h2, h3, h4, .brand { font-family: Georgia, "Times New Roman", serif; letter-
 .page-hero + .section + .section {
   background: transparent;
 }
+
+
+.home-chat-icon {
+  animation: george-pulse 2.8s ease-in-out infinite;
+  box-shadow: 0 0 0 0 rgba(47, 108, 82, 0.45), 0 10px 24px rgba(8, 17, 14, 0.28);
+}
+.homepage-start-button {
+  position: relative;
+  animation: george-cta-glow 2.6s ease-in-out infinite;
+  box-shadow: 0 10px 30px rgba(23, 68, 52, 0.34);
+}
+.homepage-start-button:hover {
+  transform: translateY(-1px) scale(1.01);
+}
+@keyframes george-pulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(47, 108, 82, 0.0), 0 10px 24px rgba(8, 17, 14, 0.28);
+  }
+  50% {
+    transform: scale(1.08);
+    box-shadow: 0 0 0 10px rgba(47, 108, 82, 0.0), 0 14px 30px rgba(8, 17, 14, 0.34);
+  }
+}
+@keyframes george-cta-glow {
+  0%, 100% {
+    filter: brightness(1);
+    box-shadow: 0 10px 30px rgba(23, 68, 52, 0.32), 0 0 0 0 rgba(143, 210, 178, 0);
+  }
+  50% {
+    filter: brightness(1.08);
+    box-shadow: 0 14px 34px rgba(23, 68, 52, 0.4), 0 0 0 8px rgba(143, 210, 178, 0);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .home-chat-icon,
+  .homepage-start-button {
+    animation: none;
+  }
+}

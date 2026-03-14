@@ -8,19 +8,19 @@ export default function ReportsPage() {
           className="page-hero-media"
           style={{
             backgroundImage:
-              "linear-gradient(180deg, rgba(5,18,15,.38), rgba(5,18,15,.82)), url(/images/reports-page.webp)",
+              "linear-gradient(180deg, rgba(5,18,15,.28), rgba(5,18,15,.78)), url(/images/reports-page.webp)",
           }}
         />
         <div className="container narrow page-hero-content">
-          <p className="eyebrow">Reports</p>
-          <h1>Please see Facebook for reports.</h1>
-          <p>For the latest catch updates and recent fishery reports, head straight to the Alderwood Ponds Facebook page.</p>
+          <p className="eyebrow">Reports, news & updates</p>
+          <h1>Please keep an eye on Facebook for our latest updates.</h1>
+          <p>For our latest fishing reports, lake updates, closures and day-to-day news, please keep an eye on the Alderwood Ponds Facebook page.</p>
           <a href={facebookUrl} target="_blank" rel="noreferrer" className="facebook-feature-card compact-facebook reports-single-facebook">
             <div className="facebook-logo-badge" aria-hidden="true">f</div>
             <div>
-              <span className="card-kicker">Facebook reports</span>
-              <h3>Please see Facebook for reports.</h3>
-              <p>Open the Alderwood Ponds Facebook page for the latest updates.</p>
+              <span className="card-kicker">Reports, news & updates</span>
+              <h3>Please keep an eye on Facebook for our latest updates.</h3>
+              <p>All fishing reports, important notices, closures and day-to-day fishery updates are posted on Facebook.</p>
             </div>
           </a>
         </div>
