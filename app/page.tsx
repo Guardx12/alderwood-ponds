@@ -82,22 +82,15 @@ export default function HomePage() {
             <div className="homepage-george-copy">
               <p className="eyebrow dark">Ask George about anything</p>
               <h2>Prices, rules, cabins, camping, fishing and more.</h2>
-              <p>
-                George now has his own dedicated page, while the Ask George button still stays easy to reach from here.
-              </p>
             </div>
           </div>
 
-          <div className="homepage-george-card">
+          <div className="homepage-george-card homepage-george-card-minimal">
             <div className="homepage-george-card-inner">
-              <p className="homepage-george-prompt">George now lives on his own dedicated page.</p>
               <div className="homepage-george-card-actions">
-                <a href="https://askgeorge.app/alderwood-ponds" className="homepage-start-button inline-flex items-center gap-2 rounded-full bg-[#2D7357] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#235844]">
-                  Speak to George
+                <a href="https://askgeorge.app/alderwood-ponds" aria-label="Speak to George" className="homepage-start-button homepage-start-button-round">
+                  <span className="homepage-start-button-round-core">George</span>
                 </a>
-                <p className="homepage-george-card-note">
-                  Tap the button to open the full Alderwood Ponds George page for prices, rules, cabins, camping, fishing and more.
-                </p>
               </div>
             </div>
           </div>
