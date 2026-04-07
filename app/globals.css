@@ -722,6 +722,35 @@ h1, h2, h3, h4, .brand { font-family: Georgia, "Times New Roman", serif; letter-
 .homepage-facebook-card {
   margin-top: 4px;
 }
+
+.homepage-george-card {
+  border-radius: 30px;
+  border: 1px solid rgba(198, 180, 138, 0.12);
+  background: linear-gradient(180deg, rgba(12,24,20,0.92) 0%, rgba(16,32,26,0.97) 100%);
+  box-shadow: 0 24px 60px rgba(2, 8, 6, 0.24);
+}
+
+.homepage-george-card-inner {
+  padding: 32px 28px;
+  display: grid;
+  gap: 18px;
+  justify-items: center;
+  text-align: center;
+}
+
+.homepage-george-card-actions {
+  display: grid;
+  gap: 16px;
+  justify-items: center;
+}
+
+.homepage-george-card-note {
+  margin: 0;
+  max-width: 620px;
+  color: rgba(221, 231, 226, 0.78);
+  font-size: 0.98rem;
+  line-height: 1.7;
+}
 .homepage-review-wrap {
   display: grid;
   gap: 18px;

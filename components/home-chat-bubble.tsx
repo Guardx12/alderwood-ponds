@@ -3,6 +3,8 @@
 import Link from "next/link"
 import { useEffect, useState } from "react"
 
+const GEORGE_PAGE = "https://askgeorge.app/alderwood-ponds"
+
 export function HomeChatBubble() {
   const [visible, setVisible] = useState(false)
 
@@ -12,7 +14,7 @@ export function HomeChatBubble() {
   }, [])
 
   return (
-    <Link href="/#george" className={`home-chat-bubble ${visible ? "show" : ""}`}>
+    <Link href={GEORGE_PAGE} className={`home-chat-bubble ${visible ? "show" : ""}`}>
       <div className="home-chat-icon">G</div>
       <div>
         <strong>Ask George about anything</strong>
